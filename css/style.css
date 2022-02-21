@@ -1,1 +1,52 @@
 /* Denna fil skall innehålla din CSS kod */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+    font-family: 'Mukta', sans-serif; 
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas:
+    "nv"
+    "mn"
+    ;
+    min-height: 100vh;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+li {
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 1.25em;
+    padding-top: 0.5em
+}
+
+nav {
+    grid-area: nv;
+}
+
+main {
+    grid-area: mn;
+    display: grid;
+    grid-template-areas: 
+    "s1"
+    "s2"
+    ;
+}
+
+#section1 {
+    grid-area: s1;
+}
+
+#section2 {
+    grid-area: s2;
+}
+
+
