@@ -12,6 +12,7 @@
     "nv"
     "mn"
     ;
+    grid-template-rows: 8% 92%;
     min-height: 100vh;
 }
 
@@ -19,6 +20,11 @@ ul {
     display: flex;
     justify-content: flex-end;
     list-style: none;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
 }
 
 li {
@@ -40,15 +46,51 @@ main {
     grid-template-areas: 
     "s1"
     "s2"
+    "s3"
     ;
+
+    grid-template-rows: 20em 10em 80em;
+    min-height: 100vh;
+    max-width: 100vw;
 }
 
-#section1 {
+#introduction {
     grid-area: s1;
+    display: flex;
+    align-items: center;
 }
 
-#section2 {
+#introduction li {
+    padding-top: 0;
+}
+
+#contact {
+    display: flex;
+    align-items: center;
     grid-area: s2;
+    color: white;
+    padding-left: 2em;
+    font-size: 20px;
+}
+
+#contactborder {
+    border-radius: 3em;
+    background-color: black;
+    height: 60px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#featured {
+    grid-area: s3;
+    background-color: black;
+    color: white;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 20px;
+    padding-top: 0.5em;
 }
 
 #logo {
@@ -59,4 +101,70 @@ main {
     padding-right: 2em;
     font-size: 20px;
     padding-top: 0.5em;
+}
+
+#image1 {
+    background-color: gray;
+    height: 24em;
+    width: 13.5em;
+}
+
+.burger {
+    margin-right: 50px;
+    cursor: pointer;
+    
+}
+.burger div {
+    display: flex;
+    justify-content: flex-end;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 10%;
+    transition: all 0.3s;
+    opacity: 1;
+}
+
+#image2 {
+    background-color: gray;
+    height: 24em;
+    width: 13.5em;
+}
+
+#image3 {
+    background-color: gray;
+    height: 24em;
+    width: 13.5em;
+;
+}
+
+#images {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2em;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    #images {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    ul {
+        opacity: 0;
+    }
+
+    #images div {
+        margin-top: 3em;
+    }
+
+    nav {
+        width: 0;
+        height: 0;
+    }
+
 }
