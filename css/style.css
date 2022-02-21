@@ -30,6 +30,8 @@ li {
 
 nav {
     grid-area: nv;
+    display: flex;
+    justify-content: space-between;
 }
 
 main {
@@ -49,4 +51,12 @@ main {
     grid-area: s2;
 }
 
-
+#logo {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 20px;
+    padding-top: 0.5em;
+}
