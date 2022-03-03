@@ -16,7 +16,17 @@
     min-height: 100vh;
 }
 
-main {
+#wrapper2 {
+    display: grid;
+    grid-template-areas:
+    "nv"
+    "mn"
+    "ft"
+    ;
+    min-height: 100vh;
+}
+
+#mainstart {
     grid-area: mn;
     display: grid;
     grid-template-areas: 
@@ -27,6 +37,21 @@ main {
 
     grid-template-rows: 20em 10em 40em;
     min-height: 100vh;
+}
+
+#mainportfolio {
+    grid-area: mn;
+    display: grid;
+    grid-template-areas: 
+    "s1p"
+    "s2p"
+    "s3p"
+    ;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {
@@ -42,7 +67,6 @@ ul {
 
 .navLinks {
     position: absolute;
-    right: 0vh;
     width: 100%;
     top: -100vh;
     transition: all 1s;
@@ -52,9 +76,40 @@ ul {
     justify-content: flex-end;
 }
 
-div #hover1, #hover2, #hover3, #hover4, #hover5 :hover{
-    height: 10px;
-    width: 10px;
+.linkUnderline {
+    bottom: -1px;
+    position: absolute;
+    color: #009dff; 
+
+}
+.navLinks a:hover #svgP {
+    width: 80px;
+}
+.navLinks a:hover #svgB {
+    width: 40px;
+}
+.navLinks a:hover #svgA {
+    width: 55px;
+}
+.navLinks a:hover #svgC {
+    width: 68px;
+}
+
+
+
+.navLinks a:hover .linkUnderline {
+    transition: all 0.7s ease;
+    width: 50px;
+    position: absolute;
+}
+
+.navLinks a:hover {
+    color: #074973;   
+    cursor: pointer;
+}
+
+.navLinks .linkUnderline{
+    transition: all 0.5s ease;
 }
 
 #list li {
@@ -68,6 +123,7 @@ div #hover1, #hover2, #hover3, #hover4, #hover5 :hover{
     padding-left: 2em;
     padding-right: 2em;
 }
+
 
 nav {
     grid-area: nv;
@@ -134,12 +190,21 @@ footer {
     ;
 }
 
+#aftereffects {
+    background-color: black;
+    grid-area: s2p;
+}
+
+#cinema4d {
+    grid-area: s3p;
+}
+
 #logo {
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    width: 111px;
-    height: 64px;
+    width: 55px;
+    height: 32px;
     margin-left: 0.5em;
     margin-top: 0.5em;
     background-image: url(../img/Logo.png);
@@ -210,7 +275,42 @@ footer {
     background-position-x: -3.5em;
     outline: white 8px solid;
     border-radius: 2em;
-;
+}
+
+#image1p {
+    background-color: gray;
+    height: 24em;
+    width: 13.5em;
+    background-image: url(../img/Car\ Under\ Water.jpg);
+    background-size: cover;
+    outline: rgb(0, 0, 0) 8px solid;
+    border-radius: 2em;
+}
+
+#image2p {
+    background-color: gray;
+    height: 24em;
+    width: 13.5em;
+    background-image: url(../img/Sky\ Eagle.jpg);
+    background-size: cover;
+    outline: rgb(0, 0, 0) 8px solid;
+    border-radius: 2em;
+}
+
+#image3p {
+    background-color: gray;
+    height: 24em;
+    width: 13.5em;
+    background-image: url(../img/Tak\ 3\ sittande\ Done.jpg);
+    background-size: cover;
+    background-position-x: -3.5em;
+    outline: rgb(0, 0, 0) 8px solid;
+    border-radius: 2em;
+
+}
+
+#photoshop {
+    grid-area: ps;
 }
 
 #images {
@@ -219,15 +319,7 @@ footer {
 
 #paragraphs {
     grid-area: pr;
-}
-
-#waves {
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    max-width: 100%;
-    margin: 0;
-    height: auto;
+    color: white;
 }
 
 #images, #paragraphs {
@@ -237,13 +329,60 @@ footer {
     text-align: center;
 }
 
-p {
+#paragraphsportfolio {
+    color: black;
+    grid-area: pr;
+}
+
+#imagesportfolio {
+    grid-area: im;
+}
+
+#photoshop {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    grid-area: s1p;
+    display: grid;
+    grid-template-areas:
+    "ps"
+    "im"
+    "pr";
+}
+
+#imagesportfolio, #paragraphsportfolio {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+    text-align: center;
+}
+
+#aftereffects {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+}
+
+#cinema4d {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+}
+
+#aftereffects h2 {
     color: white;
+}
+
+.videos {
+    padding-top: 2em;
+    justify-content: space-between;
+    display: flex;
+    padding-bottom: 2em;
 }
 
 @media only screen and (max-width: 800px) {
     
-    main {
+    #mainstart {
          grid-template-rows: 20em 10em 90em;
     }
     
@@ -255,13 +394,27 @@ p {
         ;
         grid-template-rows: 
         0.01fr 2fr;
+    }
 
+    #photoshop {
+        grid-template-areas:
+        "ps ps"
+        "im pr"
     }
 
     #images, #paragraphs {
-        display: flex;
-        justify-content: space-around;
         flex-direction: column;
+    }
+    
+    #imagesportfolio, #paragraphsportfolio {
+        flex-direction: column;
+    }
+
+    #portfolio {
+        display: grid;
+        grid-template-areas: 
+        "pf pf"
+        "im pr";
     }
 
     #featuredwork {
@@ -273,6 +426,7 @@ p {
         display: flex;
         flex-direction: column;
         height: 40vh;
+        right: 0;
         top: -100vh;
         width: 30%;
         line-height: 3em;
@@ -298,5 +452,4 @@ p {
     .burger div { 
         background-color: black;
     }
-
 }
