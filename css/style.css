@@ -6,7 +6,7 @@
     font-family: 'Mukta', sans-serif; 
 }
 
-#wrapper {
+#wrapper { /* Index */
     display: grid;
     grid-template-areas:
     "nv"
@@ -16,7 +16,7 @@
     min-height: 100vh;
 }
 
-#wrapper2 {
+#wrapper2 { /* Portfolio */
     display: grid;
     grid-template-areas:
     "nv"
@@ -26,7 +26,7 @@
     min-height: 100vh;
 }
 
-#mainstart {
+#mainstart { /* Index */
     grid-area: mn;
     display: grid;
     grid-template-areas: 
@@ -34,12 +34,10 @@
     "s2"
     "s3"
     ;
-
-    grid-template-rows: 20em 10em 40em;
     min-height: 100vh;
 }
 
-#mainportfolio {
+#mainportfolio { /* Portfolio */
     grid-area: mn;
     display: grid;
     grid-template-areas: 
@@ -143,6 +141,7 @@ footer {
     grid-area: s1;
     display: flex;
     align-items: center;
+    margin-top: 3em;
 }
 
 #introduction li {
@@ -156,6 +155,8 @@ footer {
     color: white;
     padding-left: 2em;
     font-size: 20px;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 #contact img {
@@ -327,6 +328,7 @@ footer {
     justify-content: space-around;
     padding-top: 2em;
     text-align: center;
+    margin-bottom: 3em;
 }
 
 #paragraphsportfolio {
@@ -341,7 +343,7 @@ footer {
 #photoshop {
     padding-left: 2em;
     padding-right: 2em;
-    padding-top: 1em;
+    padding-top: 3em;
     grid-area: s1p;
     display: grid;
     grid-template-areas:
@@ -376,8 +378,10 @@ footer {
 .videos {
     padding-top: 2em;
     justify-content: space-between;
+    align-items: center;
     display: flex;
     padding-bottom: 2em;
+    
 }
 
 @media only screen and (max-width: 800px) {
@@ -408,6 +412,7 @@ footer {
     
     #imagesportfolio, #paragraphsportfolio {
         flex-direction: column;
+        margin-bottom: 3em;
     }
 
     #portfolio {
@@ -422,6 +427,18 @@ footer {
     }
 
 
+    #image1p, #image2p, #image3p {
+        margin-bottom: 3em;
+    }
+
+    .videos {
+        flex-direction: column;
+    }
+
+    .videos iframe {
+        margin-bottom: 3em;
+    }
+
     .navLinks {
         display: flex;
         flex-direction: column;
@@ -435,6 +452,8 @@ footer {
         padding-bottom: 1em;
 
    }
+
+
 
     .navLinks li {
         justify-content: space-evenly;
@@ -451,5 +470,9 @@ footer {
 
     .burger div { 
         background-color: black;
+    }
+
+    #paragraphsportfolio {
+        padding-left: 3em;
     }
 }
