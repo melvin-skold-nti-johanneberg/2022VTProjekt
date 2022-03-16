@@ -48,7 +48,7 @@
     min-height: 100vh;
 }
 
-a {
+li a {
     text-decoration: none;
 }
 
@@ -122,6 +122,9 @@ ul {
     padding-right: 2em;
 }
 
+a:visited {
+    color: black;
+  }
 
 nav {
     grid-area: nv;
@@ -156,12 +159,14 @@ footer {
 }
 
 .icon {
-    width: auto;
     height: 3em;
     padding-left: 1em;
-    
+}
 
-    
+.icon1 {
+    width: 3em;
+    height: 3em;
+    margin-left: 0.9em;
 }
 
 #contact {
@@ -177,7 +182,6 @@ footer {
 }
 
 #contact img {
-    width: 100%;
     bottom: 0;
     z-index: -1;
 }
@@ -198,7 +202,6 @@ footer {
     background-color: black;
     color: white;
     padding-left: 2em;
-    padding-right: 2em;
     padding-top: 0.5em;
     display: grid;
     grid-template-areas:
@@ -270,7 +273,7 @@ footer {
     width: 13.5em;
     background-image: url(../img/Car\ Under\ Water.jpg);
     background-size: cover;
-    outline: white 8px solid;
+    box-shadow: 0 0 0 8px rgb(255, 255, 255);
     border-radius: 2em;
 }
 
@@ -280,7 +283,7 @@ footer {
     width: 13.5em;
     background-image: url(../img/Sky\ Eagle.jpg);
     background-size: cover;
-    outline: white 8px solid;
+    box-shadow: 0 0 0 8px rgb(255, 255, 255);
     border-radius: 2em;
 }
 
@@ -291,7 +294,7 @@ footer {
     background-image: url(../img/Tak\ 3\ sittande\ Done.jpg);
     background-size: cover;
     background-position-x: -3.5em;
-    outline: white 8px solid;
+    box-shadow: 0 0 0 8px rgb(255, 255, 255);
     border-radius: 2em;
 }
 
@@ -301,7 +304,7 @@ footer {
     width: 13.5em;
     background-image: url(../img/Car\ Under\ Water.jpg);
     background-size: cover;
-    outline: rgb(0, 0, 0) 8px solid;
+    box-shadow: 0 0 0 8px rgb(0, 0, 0);
     border-radius: 2em;
 }
 
@@ -311,7 +314,7 @@ footer {
     width: 13.5em;
     background-image: url(../img/Sky\ Eagle.jpg);
     background-size: cover;
-    outline: rgb(0, 0, 0) 8px solid;
+    box-shadow: 0 0 0 8px rgb(0, 0, 0);
     border-radius: 2em;
 }
 
@@ -322,7 +325,7 @@ footer {
     background-image: url(../img/Tak\ 3\ sittande\ Done.jpg);
     background-size: cover;
     background-position-x: -3.5em;
-    outline: rgb(0, 0, 0) 8px solid;
+    box-shadow: 0 0 0 8px rgb(0, 0, 0);
     border-radius: 2em;
 
 }
@@ -333,6 +336,12 @@ footer {
 
 #images {
     grid-area: im;
+}
+
+.video {
+    width: 30vw;
+    height: auto;
+    aspect-ratio: 16/9;
 }
 
 #paragraphs {
@@ -377,17 +386,15 @@ footer {
 }
 
 #aftereffects {
-    padding-left: 2em;
-    padding-right: 2em;
     padding-top: 1em;
 }
 
 #cinema4d {
-    padding-left: 2em;
-    padding-right: 2em;
     padding-top: 1em;
 }
-
+#aftereffects h2, #cinema4d h2 {
+    padding-left: 2em;
+}
 #aftereffects h2 {
     color: white;
 }
@@ -398,6 +405,7 @@ footer {
     align-items: center;
     display: flex;
     padding-bottom: 2em;
+
     
 }
 
@@ -450,6 +458,7 @@ footer {
 
     #icons {
         flex-direction: column;
+
     }
 
     .icon {
@@ -458,6 +467,13 @@ footer {
 
     .videos {
         flex-direction: column;
+    }
+
+    .video {
+        aspect-ratio: 16/9;
+        width: 70%;
+        
+        
     }
 
     .videos iframe {
@@ -475,10 +491,21 @@ footer {
         background-color: rgb(0, 0, 0);
         color: white;
         padding-bottom: 1em;
+        width: 40%;
 
    }
 
+   a:visited {
+       color: white;
+   }
 
+   li svg {
+       opacity: 0;
+   }
+
+   .navLinks a {
+    color: white;
+   }
 
     .navLinks li {
         justify-content: space-evenly;
