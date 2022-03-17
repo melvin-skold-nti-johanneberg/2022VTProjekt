@@ -6,7 +6,7 @@
     font-family: 'Mukta', sans-serif; 
 }
 
-#wrapper { /* Index */
+#wrapper { /* Wrapper för alla sidor */
     display: grid;
     grid-template-areas:
     "nv"
@@ -16,34 +16,13 @@
     min-height: 100vh;
 }
 
-#wrapper2 { /* Portfolio */
-    display: grid;
-    grid-template-areas:
-    "nv"
-    "mn"
-    "ft"
-    ;
-    min-height: 100vh;
-}
-
-#mainstart { /* Index */
+#mainstart { /* Main */
     grid-area: mn;
     display: grid;
     grid-template-areas: 
     "s1"
     "s2"
     "s3"
-    ;
-    min-height: 100vh;
-}
-
-#mainportfolio { /* Portfolio */
-    grid-area: mn;
-    display: grid;
-    grid-template-areas: 
-    "s1p"
-    "s2p"
-    "s3p"
     ;
     min-height: 100vh;
 }
@@ -140,7 +119,7 @@ footer {
     border-top: 4px white solid;
 }
 
-#introduction {
+#s1 {
     grid-area: s1;
     display: flex;
     align-items: center;
@@ -148,7 +127,7 @@ footer {
     justify-content: space-between;
 }
 
-#introduction li {
+#s1 li {
     padding-top: 0;
 }
 
@@ -169,7 +148,7 @@ footer {
     margin-left: 0.9em;
 }
 
-#contact {
+#s2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -181,7 +160,7 @@ footer {
     width: 100vw;
 }
 
-#contact img {
+#s2 img {
     bottom: 0;
     z-index: -1;
 }
@@ -197,7 +176,7 @@ footer {
     font-size: 20px;
 }
 
-#featured {
+#s3 {
     grid-area: s3;
     background-color: black;
     color: white;
@@ -388,15 +367,63 @@ footer {
     align-items: center;
     display: flex;
     padding-bottom: 2em;
+}
 
-    
+.iconabout {
+    width: 4em;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+.abouticons {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 3em;
+}
+#abouts1 {
+    grid-area:s1;
+    text-align: center;
+}
+
+#abouts2 {
+    grid-area:s2;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding-top: 0.5em;
+}
+
+#abouts3 {
+    grid-area:s3;
+    padding-left: 2em;
+    padding-top: 0.5em;
+}
+
+#abouts1 h2, #abouts2 h2 {
+    display: flex;
+    justify-content: space-around;
+    white-space: nowrap;
+    text-align: center;
+    padding-left: 1.87em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+#abouts3 {
+    display: flex;
+    flex-direction: column;
+}
+
+#abouts3 h2 {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 @media only screen and (max-width: 800px) {
     
 
     
-    #featured {
+    #s3 {
         display: grid;
         grid-template-areas:
         "fw fw"
