@@ -102,7 +102,7 @@ ul {
 }
 
 a:visited {
-    color: transparent;
+    color: black;
   }
 
 nav {
@@ -401,9 +401,10 @@ footer {
 
 .abouticons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     padding-bottom: 3em;
+    white-space: nowrap;
 }
 #abouts1 {
     grid-area:s1;
@@ -417,6 +418,10 @@ footer {
     color: white;
 }
 
+#abouts2 h1 {
+    text-align: center;
+}
+
 #abouts3 {
     grid-area:s3;
     padding-left: 2em;
@@ -428,11 +433,10 @@ footer {
     justify-content: space-around;
     white-space: nowrap;
     text-align: center;
-    padding-left: 1.87em;
     padding-bottom: 1em;
 }
 
-#abouts2 h2 {
+#abouts2 h1 {
     padding-top: 1em;
 }
 
@@ -444,6 +448,10 @@ footer {
 #abouts3 h2 {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+}
+
+#abouts3 {
+    padding-bottom: 2em;
 }
 
 
@@ -549,7 +557,7 @@ footer {
 
    }
 
-   a:visited {
+   a {
        color: white;
    }
 
@@ -573,5 +581,4 @@ footer {
     .burger div { 
         background-color: black;
     }
-
 }
