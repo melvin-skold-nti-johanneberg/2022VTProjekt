@@ -163,7 +163,6 @@ footer {
     align-items: center;
     justify-content: space-between;
     grid-area: s2;
-    color: #212329;
     background-color: #212329;
     padding-left: 2em;
     padding-top: 3em;
@@ -442,14 +441,17 @@ footer {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
     padding-top: 1em;
     white-space: nowrap;
 }
 #abouts1 {
     grid-area:s1;
+}
+
+#abouts1, #contacts1 {
     text-align: center;
-    padding-top: 1em;
+    padding-top: 3em;
     background-color: #212329;
     color: #fff;
 }
@@ -467,24 +469,25 @@ footer {
 
 .abouts3 {
     grid-area:s3;
-    padding-top: 0.5em;
+    padding-top: 1em;
     display: flex;
     flex-direction: column;
     padding-right: 2em;
     padding-bottom: 2em;
     background-color: #212329;
     color: white;
+    padding-bottom: 2em;
 }
 
 .abouts3 h2, .abouts3 p {
     margin-left: 2em;
+    margin-right: 2em;
 }
 
 .abouts3 p {
     padding-top: 1em;
     padding-bottom: 2em;
 }
-
 
 #s4 {
     background-color: #25272D;
@@ -506,6 +509,54 @@ footer {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
+
+.map {
+    width: 60vw;
+    aspect-ratio: 2/1;
+    height: auto;
+}
+
+.mapbox {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    background-color: #292C32;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    grid-area: s2;
+}
+
+.mapbox h2 {
+    color: #fff;
+    padding-bottom: 1em;
+}
+
+.mapbox img {
+    height: 1px;
+    width: 1px;
+}
+
+.mapbox p {
+    color: white;
+    padding-top: 1em;
+}
+
+
+
+#maincontact {
+    display: grid;
+    grid-template-areas:
+    "s1"
+    "s2"
+    ;
+}
+
+#contacts1 {
+    grid-area: s1;
+}
+
 
 
 @media only screen and (max-width: 800px) {
