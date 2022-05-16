@@ -8,3 +8,17 @@ function toggleMeny() {
 }
 
 burger.addEventListener('click', toggleMeny)
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navBar").style.padding = "20px 10px";
+    document.querySelector(".navLinks").style.top = "-96.5vh";
+  } else {
+    document.getElementById("navBar").style.padding = "40px 10px";
+    document.querySelector(".navLinks").style.top = "-94.5vh";
+  }
+}
+
+scrollFunction()
